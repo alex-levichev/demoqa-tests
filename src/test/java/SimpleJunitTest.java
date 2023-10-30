@@ -46,7 +46,7 @@ public class SimpleJunitTest {
         $("#city").click();
         $("#react-select-4-input").val("Delhi").pressEnter();
         $("#submit").pressEnter();
-        // Checks
+        // Проверки
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         $(".table-responsive").shouldHave(
                 text("Aleksandr Levichev"),
