@@ -58,25 +58,6 @@ public class SimpleJunitTest {
         $(".table-responsive").shouldHave(text("picture"));
         $(".table-responsive").shouldHave(text("Moscow oblast"));
         $(".table-responsive").shouldHave(text("NCR Delhi"));
-
-
-
-        //Check
-        //submit
-
-
-
-
-        // subjectsContainer
-
-
-
-
-
-
-
-
-     //   $("[id=search]").shouldHave(text("https://ru.selenide.org"));
     }
 
 }
