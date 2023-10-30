@@ -48,16 +48,17 @@ public class SimpleJunitTest {
         $("#submit").pressEnter();
         // Checks
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-        $(".table-responsive").shouldHave(text("Aleksandr Levichev"));
-        $(".table-responsive").shouldHave(text("Bill@bill.com"));
-        $(".table-responsive").shouldHave(text("Male"));
-        $(".table-responsive").shouldHave(text("8999881105"));
-        $(".table-responsive").shouldHave(text("01 December,1900"));
-        $(".table-responsive").shouldHave(text("Maths, Computer Science"));
-        $(".table-responsive").shouldHave(text("Reading, Music, Sports"));
-        $(".table-responsive").shouldHave(text("picture"));
-        $(".table-responsive").shouldHave(text("Moscow oblast"));
-        $(".table-responsive").shouldHave(text("NCR Delhi"));
+        $(".table-responsive").shouldHave(
+                text("Aleksandr Levichev"),
+                text("Bill@bill.com"),
+                text("Male"),
+                text("8999881105"),
+                text("01 December,1900"),
+                text("Maths, Computer Science"),
+                text("Reading, Music, Sports"),
+                text("picture"),
+                text("Moscow oblast"),
+                text("NCR Delhi"));
     }
 
 }
