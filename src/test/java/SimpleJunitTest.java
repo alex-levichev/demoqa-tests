@@ -59,6 +59,8 @@ public class SimpleJunitTest {
                 text("picture"),
                 text("Moscow oblast"),
                 text("NCR Delhi"));
+        // Закрытие формы
+        $("#closeLargeModal").click();
     }
 
 }
