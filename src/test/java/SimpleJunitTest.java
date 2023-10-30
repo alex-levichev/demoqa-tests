@@ -60,5 +60,4 @@ public class SimpleJunitTest {
         $(".table-responsive").shouldHave(text("NCR Delhi"));
     }
 
-
 }
