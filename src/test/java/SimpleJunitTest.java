@@ -7,8 +7,7 @@ import java.io.File;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.byValue;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class SimpleJunitTest {
 
@@ -16,13 +15,15 @@ public class SimpleJunitTest {
     static void beforeAll() {
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.holdBrowserOpen = true;
+    //    Configuration.holdBrowserOpen = true;
     }
 
     @Test
 
     void automationPracticeFormTest() {
         open("https://demoqa.com/automation-practice-form");
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
         $("#firstName").setValue("Aleksandr");
         $("#lastName").setValue("Levichev");
         $("#userEmail").setValue("Bill@bill.com");
@@ -39,8 +40,7 @@ public class SimpleJunitTest {
         $("#hobbiesWrapper").$(byText("Music")).click();
         $("#hobbiesWrapper").$(byText("Sports")).click();
         $("#currentAddress").setValue("Moscow oblast");
-        $("#uploadPicture").uploadFile(new File("C:\\Users\\alex-\\IdeaProjects\\demoqa-tests\\src\\test\\picture"));
-        $("#state").scrollTo();
+        $("#uploadPicture").uploadFromClasspath("image.png");
         $("#state").click();
         $("#react-select-3-input").val("NCR").pressEnter();
         $("#city").click();
